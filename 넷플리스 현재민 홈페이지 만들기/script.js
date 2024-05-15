@@ -1,6 +1,10 @@
 
 document.addEventListener('DOMContentLoaded', function () {
     const movies = document.querySelectorAll('.movie img');
+    const slider = document.querySelector('.top10-grid');
+    const next = document.querySelector('.next');
+    const prev = document.querySelector('.prev');
+    let currentIndex = 0;
 
     movies.forEach(movie => {
         movie.addEventListener('mouseover', () => {
@@ -19,4 +23,20 @@ document.addEventListener('DOMContentLoaded', function () {
             alert('이 영화를 재생합니다!');
         });
     });
+
+    next.addEventListener('click', () => {
+        if (currentIndex < movies.length - 5) {  // -5 to show 5 items at a time
+            currentIndex++;
+            slider.style.transform = `translateX(-${currentIndex * 20}%)`;
+        }
+    });
+
+    prev.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            slider.style.transform = `translateX(-${currentIndex * 20}%)`;
+        }
+    });
+
+    
 });

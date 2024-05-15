@@ -1,12 +1,14 @@
 body, html {
+    color: white;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    background-color: black;
 }
 
 header {
     background-color: #141414;
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 10px 20px;
     display: flex;
     align-items: center;
@@ -23,7 +25,7 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin-right: 100px;
 }
 
 nav ul li a {
@@ -40,15 +42,35 @@ nav ul li a {
     padding: 20px;
 }
 
-.movie-grid {
+.top10-grid,.movie-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
 .movie img {
     width: 100%;
     display: block;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size:30px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button.prev {
+    left: 0;
+}
+
+button.next {
+    right: 0;
 }
 
 footer {
