@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const next = document.querySelector('.next');
     const prev = document.querySelector('.prev');
     let currentIndex = 0;
+    const itemsToShow = 4; // 화면에 표시할 항목 수
+    const totalItems = movies.length;
 
     movies.forEach(movie => {
         movie.addEventListener('mouseover', () => {
@@ -25,16 +27,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     next.addEventListener('click', () => {
-        if (currentIndex < movies.length - 5) {  // -5 to show 5 items at a time
+        if (currentIndex < totalItems - itemsToShow) {
             currentIndex++;
-            slider.style.transform = `translateX(-${currentIndex * 20}%)`;
+            slider.style.transform = `translateX(-${currentIndex * (100 / itemsToShow)}%)`;
         }
     });
 
     prev.addEventListener('click', () => {
         if (currentIndex > 0) {
             currentIndex--;
-            slider.style.transform = `translateX(-${currentIndex * 20}%)`;
+            slider.style.transform = `translateX(-${currentIndex * (100 / itemsToShow)}%)`;
         }
     });
 
