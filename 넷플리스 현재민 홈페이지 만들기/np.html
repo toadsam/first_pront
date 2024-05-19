@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>넷플리스 홈페이지</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -21,36 +20,85 @@
         </nav>
     </header>
     <section class="main-banner">
-       <!-- <img src="HJM2.jpg" alt="메인 배너">-->
+       <!-- <img src="HJM2.jpg" alt="메인 배너"> -->
     </section>
-    <div class="container"><h2>오늘의 Top2</h2>
+    <div class="container">
+        <h2>오늘의 Top2</h2>
         <div class="slider-container">
-            
             <button class="prev">&#10094;</button>
-        <div class="top10-grid">
-            <div class="movie"><a href="https://www.youtube.com/watch?v=gJCCspSFI1c&t=1s"><img src="HJM영화 포스터.webp" alt="영화1"></a></div>
-            <div class="movie"><a href="https://www.youtube.com/watch?v=O4MAJcsNgkM"><img src="히어로는 아닙니다만.webp" alt="영화2"></a></div>
-            <div class="movie"><a href="https://www.youtube.com/watch?v=gJCCspSFI1c&t=1s"><img src="HJM영화 포스터.webp" alt="영화1"></a></div>
-            <div class="movie"><a href="https://www.youtube.com/watch?v=O4MAJcsNgkM"><img src="히어로는 아닙니다만.webp" alt="영화2"></a></div>
-            <div class="movie"><a href="https://www.youtube.com/watch?v=gJCCspSFI1c&t=1s"><img src="HJM영화 포스터.webp" alt="영화1"></a></div>
-            <div class="movie"><a href="https://www.youtube.com/watch?v=O4MAJcsNgkM"><img src="히어로는 아닙니다만.webp" alt="영화2"></a></div>
-            <div class="movie"><a href="https://www.youtube.com/watch?v=gJCCspSFI1c&t=1s"><img src="HJM영화 포스터.webp" alt="영화1"></a></div>
-            <div class="movie"><a href="https://www.youtube.com/watch?v=O4MAJcsNgkM"><img src="히어로는 아닙니다만.webp" alt="영화2"></a></div>
-            <div class="movie"><a href="https://www.youtube.com/watch?v=gJCCspSFI1c&t=1s"><img src="HJM영화 포스터.webp" alt="영화1"></a></div>
-            <div class="movie"><a href="https://www.youtube.com/watch?v=O4MAJcsNgkM"><img src="히어로는 아닙니다만.webp" alt="영화2"></a></div>
+            <div class="top10-grid">
+                <div class="movie">
+                    <div class="movie-content">
+                        <img src="HJM영화 포스터.webp" alt="영화1">
+                        <div class="movie-info">
+                            <div class="buttons">
+                                <button class="play">▶</button>
+                                <button class="like">👍</button>
+                                <button class="add-to-list">➕</button>
+                            </div>
+                            <p class="genre">드라마, 로맨스</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie">
+                    <div class="movie-content">
+                        <img src="히어로는 아닙니다만.webp" alt="영화2">
+                        <div class="movie-info">
+                            <div class="buttons">
+                                <button class="play">▶</button>
+                                <button class="like">👍</button>
+                                <button class="add-to-list">➕</button>
+                            </div>
+                            <p class="genre">코미디, 액션</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 더 많은 영화 항목 추가 가능 -->
+            </div>
             <button class="next">&#10095;</button>
         </div>
         <h2>지금 뜨는 콘텐츠</h2>
         <div class="movie-grid">
-            <div class="movie"><img src="갯마을 차차차.webp" alt="영화1"></div>
-            <div class="movie"><img src="히어로는 아닙니다만.webp" alt="영화2"></div>
-            <div class="movie"><img src="눈물의 여왕.webp" alt="영화3"></div>
-            <div class="movie"><img src="멜로가 체질.webp" alt="영화4"></div>
-            <div class="movie"><img src="이번생은 처음이라.webp" alt="영화5"></div>
-            <div class="movie"><img src="별이삼샵.webp" alt="영화6"></div>
-            <div class="movie"><img src="범죄도시2.webp" alt="영화7"></div>
-            <div class="movie"><img src="외모지상주의.webp" alt="영화8"></div>
-            <!-- 여러 영화 추가 가능 -->
+            <div class="movie">
+                <div class="movie-content">
+                    <img src="갯마을 차차차.webp" alt="영화1">
+                    <div class="movie-info">
+                        <div class="buttons">
+                            <button class="play">▶</button>
+                            <button class="like">👍</button>
+                            <button class="add-to-list">➕</button>
+                        </div>
+                        <p class="genre">드라마, 로맨스</p>
+                    </div>
+                </div>
+            </div>
+            <div class="movie">
+                <div class="movie-content">
+                    <img src="히어로는 아닙니다만.webp" alt="영화2">
+                    <div class="movie-info">
+                        <div class="buttons">
+                            <button class="play">▶</button>
+                            <button class="like">👍</button>
+                            <button class="add-to-list">➕</button>
+                        </div>
+                        <p class="genre">코미디, 액션</p>
+                    </div>
+                </div>
+            </div>
+            <div class="movie">
+                <div class="movie-content">
+                    <img src="눈물의 여왕.webp" alt="영화3">
+                    <div class="movie-info">
+                        <div class="buttons">
+                            <button class="play">▶</button>
+                            <button class="like">👍</button>
+                            <button class="add-to-list">➕</button>
+                        </div>
+                        <p class="genre">드라마, 로맨스</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 더 많은 영화 항목 추가 가능 -->
         </div>
     </div>
     <footer>
@@ -59,4 +107,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
