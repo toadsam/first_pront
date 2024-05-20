@@ -1,4 +1,21 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const playButtons = document.querySelectorAll('.play');
+    const likeButtons = document.querySelectorAll('.like');
+
+    playButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            alert('영화가 실행됩니다!');
+            const url = button.getAttribute('data-url');
+            window.open(url, '_blank');
+        });
+    });
+
+    likeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            button.classList.toggle('active');
+        });
+    });
+
     const movies = document.querySelectorAll('.top10-grid .movie');
     const slider = document.querySelector('.top10-grid');
     const next = document.querySelector('.next');

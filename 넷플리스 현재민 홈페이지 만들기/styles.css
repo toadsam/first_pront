@@ -100,6 +100,19 @@ nav ul li a {
     font-size: 16px;
 }
 
+.movie-info .like {
+    width: 24px;
+    height: 24px;
+    background-image: url('heart-empty.png'); /* 빈 하트 이미지 경로 */
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+}
+
+.movie-info .like.active {
+    background-image: url('heart-fill.png'); /* 채워진 하트 이미지 경로 */
+}
+
 .movie-info .genre {
     font-size: 16px;
     color: #ddd;
