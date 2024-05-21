@@ -103,7 +103,7 @@ nav ul li a {
 .movie-info .like {
     width: 40px; /* 하트 버튼 크기 조정 */
     height: 40px; /* 하트 버튼 크기 조정 */
-    background-image: url('heart-empty.png'); /* 빈 하트 이미지 경로 */
+    background-image: url('Images/heart-empty.png'); /* 빈 하트 이미지 경로 */
     background-size: contain; /* 이미지가 버튼 안에 들어가도록 설정 */
     background-repeat: no-repeat; /* 이미지 반복 제거 */
     background-position: center; /* 이미지 중앙 정렬 */
@@ -112,7 +112,7 @@ nav ul li a {
 }
 
 .movie-info .like.active {
-    background-image: url('heart-fill.png'); /* 채워진 하트 이미지 경로 */
+    background-image: url('Images/heart-fill.png'); /* 채워진 하트 이미지 경로 */
 }
 
 .movie-info .genre {
