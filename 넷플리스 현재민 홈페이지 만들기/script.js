@@ -1,5 +1,35 @@
 document.addEventListener('DOMContentLoaded', function () {
     // 로그인 상태 확인
+    const usernameDisplay = document.getElementById('usernameDisplay');
+    const loginButton = document.getElementById('loginButton');
+    const logoutButton = document.getElementById('logoutButton');
+
+    function updateAuthDisplay() {
+        if (localStorage.getItem('loggedIn') === 'true') {
+            const username = localStorage.getItem('username');
+            usernameDisplay.textContent = `${username}님`;
+            loginButton.style.display = 'none';
+            logoutButton.style.display = 'inline';
+        } else {
+            usernameDisplay.textContent = '';
+            loginButton.style.display = 'inline';
+            logoutButton.style.display = 'none';
+        }
+    }
+
+    updateAuthDisplay();
+
+    loginButton.addEventListener('click', () => {
+        window.location.href = 'login.html';
+    });
+
+    logoutButton.addEventListener('click', () => {
+        localStorage.removeItem('loggedIn');
+        localStorage.removeItem('username');
+        updateAuthDisplay();
+        alert('로그아웃 되었습니다.');
+    });
+
     if (localStorage.getItem('loggedIn') !== 'true') {
         window.location.href = 'login.html';
         return;
@@ -8,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const playButtons = document.querySelectorAll('.play');
     const likeButtons = document.querySelectorAll('.like');
     const addToListButtons = document.querySelectorAll('.add-to-list');
-    const myListItems = new Set(JSON.parse(localStorage.getItem('myListItems')) || []); // 찜한 콘텐츠 제목을 저장하는 Set
+    const myListItems = new Set(JSON.parse(localStorage.getItem('myListItems')) || []);
 
     // 영화 모달 관련 요소
     const modal = document.getElementById('movieModal');
