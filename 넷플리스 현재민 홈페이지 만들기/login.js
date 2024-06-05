@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
 
-        // 간단한 로그인 검증 (여기서는 예제로 username: 'a', password: 'a')
-        if (username === '윤창빈' && password === '윤창빈') {
+        // 간단한 로그인 검증 (여기서는 예제로 username: '윤창빈', password: '윤창빈')
+        if ((username === '윤창빈' && password === '@')||username === '정재훈' && password === '@'||username === '은세민' && password === '@'||username === '배현아' && password === '@') {
             localStorage.setItem('loggedIn', 'true');
             localStorage.setItem('username', username);
             alert('로그인 성공!');
